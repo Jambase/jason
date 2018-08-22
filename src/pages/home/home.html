@@ -1,14 +1,30 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+    <ion-navbar color="blue">
+      <ion-title align="center">
+        Codetribe 2018
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="content">
+    <ion-list no-lines>
+      <ion-list-header align="center" style="color:darkolivegreen;background-color:#c5d2d3;border-radius: 5px"><h1>CodeTribe curriculum</h1></ion-list-header>
+  
+      <button ion-item *ngFor='let courses of arrayCourse;' (click)="gotoCoursePage(courses)">
+      <ion-icon name="{{courses.icon}}" item-left></ion-icon>
+        <h1>Course:{{courses.number}}</h1>
+        <h2>{{courses.title}}</h2>
+        <h3>Duration: {{courses.weeks}} weeks</h3>
+        <div *ngFor="let lesson of courses.lessons">
+          <p style="color:lightslategrey;">lesson:{{lesson.number}} {{lesson.title}}</p>
+        </div>
+    </button>
+    </ion-list>
+  </ion-content>
+  
+  
+  
+  Collapse 
+  Message Input
+  
+  Message @Romeo 
